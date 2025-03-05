@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using System.Text;
 
 class Program
@@ -128,7 +129,9 @@ class Task4
                 double tc = Convert.ToDouble(Console.ReadLine());
                 if (ta + tb > tc && ta + tc > tb && tb + tc > ta)
                 {
-                    double s = (ta + tb + tc) / 2;
+                    double perimeter = ta + tb + tc;
+                    double s = perimeter / 2;
+                    Console.WriteLine($"Периметр: {perimeter:F2}"); ;
                     Console.WriteLine($"Площа: {Math.Sqrt(s * (s - ta) * (s - tb) * (s - tc)):F2}");
                 }
                 else
